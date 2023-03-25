@@ -1,0 +1,35 @@
+.topnav{
+    flex: 5;
+    height: 3rem;
+    margin-top: .5rem;
+    // justify-content: space-between;
+    .flex-container{
+        display: flex;
+        ul{
+            list-style:none;
+            justify-content: flex-end;
+            display: flex;
+            align-items: left;
+            width: 100%;
+            margin-left: 20rem;
+            margin-right: 2rem;
+            li{
+                text-align: left;
+                padding-left: .7rem;
+                padding-right: .7rem;
+                font-size: 1.4rem;
+                display: flex;
+                justify-content: center;
+                gap: .4rem;
+                .icon{
+                    transform: scale(1.5);
+                    margin-left: .7rem;
+                }
+            }
+        }
+    }
+    hr{
+        border: 1px solid 
+        #EDEDED;
+    }
+}

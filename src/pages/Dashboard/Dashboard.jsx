@@ -1,8 +1,12 @@
-import React from 'react'
+import './dashboard.scss'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className='dashboard'>
+      <section className='site__overview'>
+        <h1>Site Overview</h1>
+      </section>
+    </div>
   )
 }
 

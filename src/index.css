@@ -2,20 +2,26 @@ body {
   margin: 0;
 }
 
-:root{
- /* Colors */
- --primary-color: #EF2C5A;
- --dashboard-title-text-color: #8D8D8D;
- --text-color: #000000;
- --table-text-color: #5F5F5F;
- --side-bar-background-color: #FFFBF7;
+:root {
+  /* Colors */
+  --primary-color: #EF2C5A;
+  --dashboard-title-text-color: #8D8D8D;
+  --text-color: #000000;
+  --table-text-color: #5F5F5F;
+  --side-bar-background-color: #FFFBF7;
 
- /* Size */
- --text-lg: 16px;
- --text-sm: 12px;
- --price-size: 20px
+  /* Size */
+  --text-lg: 16px;
+  --text-sm: 12px;
+  --price-size: 20px
+    /* Font Family */
+    --primary-font: 'General Sans', sans-serif;
 
- /* Font Family */
- --primary-font: 'General Sans'
+  /* Screen Sizes */
+  --small-screen: 640px;
+  --medium-screen: 768px;
+  --large-screen: 1024px;
+  --xlarge-screen: 1200px;
+
 
 }
