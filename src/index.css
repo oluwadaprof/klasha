@@ -9,6 +9,10 @@ body {
   --text-color: #000000;
   --table-text-color: #5F5F5F;
   --side-bar-background-color: #FFFBF7;
+  --email-color: #565C69;
+  --gray-100: #F0F0F0;
+  --gray-700: #565C69;
+  --shade-black:#0A0A0A;
 
   /* Size */
   --text-lg: 16px;

@@ -1,31 +1,238 @@
-.dashboard{
-    text-align: left;
+.dashboard {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-top: -44rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  section {
+    & > h1 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+    & > div {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+  .sales {
+    margin-top: 3rem;
     display: flex;
+    flex-wrap: nowrap;
+    gap: 5rem;
     flex-direction: column;
-    margin-top: -44rem;
-    section{
-        &> h1{
-            font-weight: 500;
-            font-size: 20px;
-        }
-        &> div{
-            display: flex;
-            gap: 1.5rem;
-        }
-    }
-    .sales{
-        margin-top: 3rem;
+    align-items: left;
+    justify-content: left;
+    //    flex-direction: column;
+    //    flex: 1;
+    .first_sales-section {
+      display: flex;
+      flex-direction: column;
+      width: 45rem;
+      & > header {
         display: flex;
-       .first_sales-section{
-        & > header{
-            display: flex;
-            align-items: first baseline;
-            gap: 2rem;
+        align-items: first baseline;
+        // flex-wrap: nowrap;
+        row-gap: 1rem;
+        column-gap: 2rem;
+        & > h2 {
+          font-size: 20px;
+          font-weight: 500;
         }
-        h2{
-            font-size: 25px;
-            font-weight: normal;
+        span {
+          color: 1px solid rgba(0, 0, 0, 0.1);
+          height: 2rem;
+          margin-left: -1rem;
         }
-       }
+        #week {
+          font-weight: 600;
+          color: var(--primary-color);
+          min-width: 3.3rem;
+        }
+        #month {
+          font-weight: 600;
+          min-width: 3.3rem;
+        }
+        & > div {
+          #dropdownCurrency {
+            height: 3rem;
+            width: 6rem;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            &:focus {
+              border: 1px solid black;
+            }
+          }
+        }
+        .email_container {
+          #dropdownMail {
+            height: 3rem;
+            width: 18rem;
+            border-radius: 6px;
+            color: var(--email-color);
+
+            /* hide default arrow button */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* add custom arrow */
+
+            background-repeat: no-repeat;
+            background-position: right center;
+            /* adjust padding and border */
+            padding: 8px 28px 8px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* set font properties */
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 400;
+            /* set color properties */
+            color: #333;
+            background-color: #fff;
+            /* add hover and focus styles */
+            cursor: pointer;
+          }
+        }
+        & > button {
+          width: 10rem;
+          min-width: 10rem;
+          height: 3rem;
+          background: none;
+          border: 1px solid black;
+          border-radius: 4px;
+          font-weight: 600;
+          font-size: 0.85rem;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          &:hover {
+            cursor: pointer;
+          }
+          #arrow_icon {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      h2 {
+        font-size: 25px;
+        font-weight: normal;
+      }
     }
+  }
+  .second_sales-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin-top: -3rem;
+    width: 100vw;
+    .mainchart {
+      width: 50%;
+
+      border: 1px solid black;
+      border-radius: 8px;
+      height: 20rem;
+    }
+    & > .content {
+      background: var(--primary-color);
+      height: 18rem;
+      width: 25rem;
+      // margin-top: 5rem;
+      border-radius: 8px;
+      background-image: url("../../assets/lines.png");
+      & > p {
+        color: white;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+        margin-left: 2rem;
+        margin-top: 2rem;
+      }
+    }
+    // flex: .6;
+  }
+}
+
+@media only screen and (max-width: "1024px") {
+  .dashboard {
+    margin-top: 10rem;
+    margin-left: -15rem;
+    .site__overview {
+      & > div {
+        overflow-x: scroll;
+      }
+    }
+  }
+  .sales {
+    .first_sales-section {
+      // width: 70rem;
+      & > header {
+        flex-wrap: wrap;
+      }
+    }
+    .second_sales-section {
+      .mainchart {
+        width: 63%;
+      }
+      & > .content {
+        width: 22rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: "768px") {
+  .dashboard {
+    margin-top: 10rem;
+    margin-left: -15rem;
+    .site__overview {
+      & > div {
+        overflow-x: scroll;
+      }
+    }
+  }
+  .sales {
+    .first_sales-section {
+      & > header {
+        flex-wrap: wrap;
+      }
+    }
+    .second_sales-section {
+      .mainchart {
+        width: 87%;
+      }
+      & > .content {
+        width: 22rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: "425px") {
+  .dashboard {
+    margin-top: 10rem;
+    margin-left: -15rem;
+    .site__overview {
+      & > div {
+        overflow-x: scroll;
+      }
+    }
+  }
+  .sales {
+    .first_sales-section {
+      & > header {
+        // flex-wrap: wrap;
+        // width: 10rem;
+      }
+    }
+    .second_sales-section {
+      .mainchart {
+        width: 79%;
+      }
+      & > .content {
+        width: 28rem;
+      }
+    }
+  }
 }

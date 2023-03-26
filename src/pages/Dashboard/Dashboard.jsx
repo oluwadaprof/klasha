@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import ChartData from "../../components/chart/ChartData";
 import MainChart from "../../components/chart/MainChart";
 import SmallChart from "../../components/chart/SmallChart";
+import { IoIosArrowDown } from "react-icons/io";
+import { BiDownArrowAlt } from "react-icons/bi";
 import "./dashboard.scss";
 
 const Dashboard = () => {
@@ -14,7 +16,7 @@ const Dashboard = () => {
     { value: "option3", label: "INR" },
   ];
   const emailOptions = [
-    { value: "default", label: " " },
+    { value: "default", label: "Email" },
     { value: "option11", label: "adeekotobiloba8@gmail.com" },
     { value: "option22", label: "klasha@gmail.com" },
     { value: "option33", label: "findme@gmail.com" },
@@ -36,48 +38,60 @@ const Dashboard = () => {
         </div>
       </section>
       <section className="sales">
-        <div className="first_sales-section" >
-        <header>
-          <h2>Sales</h2>
-          <p>7 days</p>
-          <p>30 days</p>
-          <div>
-            <select
-              id="dropdown"
-              value={selectedValue}
-              onChange={(e) => setSelectedValue(e.target.value)}
-            >
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
-           {/* Email container */}
-          <div>
-            <select
-              id="dropdown"
-              value={selectedValue}
-              onChange={(e) => setSelectedValue(e.target.value)}
-            >
-              {emailOptions.map((emailOption) => (
-                <option key={emailOption.value} value={emailOption.value}>
-                  {emailOption.label}
-                </option>
-              ))}
-            </select>
-          </div>
-          <button>Download Report</button>
-        </header>
+        <div className="first_sales-section">
+          <header>
+            <h2>Sales</h2>
+            <span>|</span>
+            <p id="week">7 days</p>
+            <p id="month"> 30 days</p>
+            <div>
+              <select
+                id="dropdownCurrency"
+                value={selectedValue}
+                onChange={(e) => setSelectedValue(e.target.value)}
+              >
+                {options.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {/* Email container */}
+            <div className="email_container">
+              <select
+                id="dropdownMail"
+                value={selectedValue}
+                onChange={(e) => setSelectedValue(e.target.value)}
+                style={{
+                  backgroundImage: `url('data:image/svg+xml;base64,${new IoIosArrowDown().toString()}')`,
+                }}
+              >
+                {emailOptions.map((emailOption) => (
+                  <option key={emailOption.value} value={emailOption.value}>
+                    {emailOption.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <button>
+              <BiDownArrowAlt id="arrow_icon" />
+              Download Report
+            </button>
+          </header>
 
-        {/* First sales side chart */}
-
-        <section>
-          <MainChart/>
-        </section>
+          {/* First sales side chart */}
         </div>
-        
+        <div className="second_sales-section">
+          <section className="mainchart">{/* <MainChart/> */}</section>
+          <div className="content">
+            <p>
+              KlashaWire - send <br />
+              money to businesses <br />
+              globally from Africa
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

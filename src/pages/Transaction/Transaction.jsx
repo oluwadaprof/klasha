@@ -1,9 +1,29 @@
-import React from 'react'
+import Search from "../../components/search/Search";
+import "./transaction.scss";
+import { BiFilter } from "react-icons/bi";
+import React from "react";
+
 
 const Transaction = () => {
   return (
-    <div>Transaction</div>
-  )
-}
+    <div className="transaction">
+      <h3>Transaction History</h3>
 
-export default Transaction
+      <div className="search_content">
+        <Search />
+        <div className="filter_content">
+          <button type="">
+            Filter <BiFilter />
+          </button>
+          <button type="">Export</button>
+        </div>
+      </div>
+
+      <section>
+        
+      </section>
+    </div>
+  );
+};
+
+export default Transaction;

@@ -1,0 +1,42 @@
+.transaction {
+  margin-top: -40rem;
+  text-align: left;
+  margin-left: 3rem;
+  border: 1px solid var(--gray-100);
+  margin-right: 3rem;
+  padding: 0.6rem;
+  border-radius: 4px;
+  h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--shades-black);
+    margin-left: .8rem;
+  }
+  .search_content {
+    display: flex;
+    padding: 1rem 1rem;
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+    justify-content: space-between;
+    align-items: center;
+
+    .filter_content {
+        display: flex;
+        gap: 1rem;
+      & > button {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:.4rem;
+        border-radius: 8px;
+        background: none;
+        border: 1px solid black;
+        width: 94px;
+        height: 40px;
+        font-size: 12px;
+      }
+    }
+  }
+}

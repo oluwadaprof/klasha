@@ -13,52 +13,52 @@ const SideBar = () => {
       <div className="center">
         <ul>
           <p className="title">Main Pages</p>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" />
               <span>Dashboard</span>
             </li>
           </NavLink>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Users</span>
             </li>
           </NavLink>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Products</span>
             </li>
           </NavLink>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Orders</span>
             </li>
           </NavLink>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Delivery</span>
             </li>
           </NavLink>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Products</span>
             </li>
           </NavLink>
 
           <p className="title">Accept Payments</p>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/">
             <li>
               <FaAppStore className="icon" /> <span>Users</span>
             </li>
           </NavLink>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Products</span>
             </li>
           </NavLink>
 
           <p className="title">Send Payments</p>
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" >
             <li>
               <FaAppStore className="icon" /> <span>Stats</span>
             </li>
