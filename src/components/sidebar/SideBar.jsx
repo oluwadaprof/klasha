@@ -1,10 +1,13 @@
 import { FaAppStore } from "react-icons/fa";
 import React from "react";
 import "./sidebar.scss";
+import { useState } from "react";
 import Logo from "../../assets/klasha__logo 1.png";
 import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
+  const [isActive, setIsActive] = useState("home");
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -13,55 +16,46 @@ const SideBar = () => {
       <div className="center">
         <ul>
           <p className="title">Main Pages</p>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" />
-              <span>Dashboard</span>
-            </li>
+          <NavLink
+            to="/dashboard"
+            className="li"
+            activeClassName="active"
+          >
+            <FaAppStore className="icon" />
+            <span> Dashboard</span>
           </NavLink>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Users</span>
-            </li>
+          <NavLink to="/balances" className="li" activeClassName="active">
+            <FaAppStore className="icon" /> <span>Balances</span>
           </NavLink>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Products</span>
-            </li>
+          <NavLink to="/transaction" className="li " activeClassName="active" >
+            <FaAppStore className="icon" /> <span>Transactions</span>
           </NavLink>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Orders</span>
-            </li>
+          <NavLink
+            to="/analytics"
+            className="li "
+            activeClassName="active"
+            
+          >
+            <FaAppStore className="icon" /> <span>Analytics</span>
           </NavLink>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Delivery</span>
-            </li>
+          <NavLink to="/marketing" className="li " activeClassName="active" >
+            <FaAppStore className="icon" /> <span>Marketing</span>
           </NavLink>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Products</span>
-            </li>
+          <NavLink to="/exchangeRates" className="li " activeClassName="active" >
+            <FaAppStore className="icon" /> <span>Exchange rates</span>
           </NavLink>
 
           <p className="title">Accept Payments</p>
-          <NavLink to="/">
-            <li>
-              <FaAppStore className="icon" /> <span>Users</span>
-            </li>
+          <NavLink to="/checkouts" className="li " activeClassName="active" >
+            <FaAppStore className="icon" /> <span>Checkouts</span>
           </NavLink>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Products</span>
-            </li>
+          <NavLink to="/paymentLink" className="li " activeClassName="active" >
+            <FaAppStore className="icon" /> <span>Payment Links</span>
           </NavLink>
 
           <p className="title">Send Payments</p>
-          <NavLink to="/" >
-            <li>
-              <FaAppStore className="icon" /> <span>Stats</span>
-            </li>
+          <NavLink to="/wire" className="li " activeClassName="active" >
+            <FaAppStore className="icon" /> <span>Wire</span>
           </NavLink>
         </ul>
       </div>
