@@ -1,53 +1,8 @@
-// .pagination {
-//     display: flex;
-//     justify-content: center;
-//     margin-top: 16px;
-//     border: 1px solid #E8E8E8;
-//     border-radius: 3px;
-//     width: 40rem;
-//     margin-left: 44rem;
-//     align-items: center;
-//     border-radius: 5px;
-    
-//     button {
-//      border: none;
-//       border-radius: 50%;
-//       background-color: #fff;
-//       color:  #A39D9E;
-//       margin: 0 4px;
-//       font-size: 16px;
-//       cursor: pointer;
-//       width: 2.6rem;
-//       height: 2.6rem;
-//      & > p{
-       
-//      }
-
-//      .icon_left{
-//       font-size: 2rem;
-//      }
-//      .icon_right{
-//       font-size: 2rem;
-//      }
-      
-//       &.active {
-//         background-color: #F0F0F0;
-//         color: var(--shade-black);
-//         font-weight: 700;
-//         // border-radius: 50%;
-//       }
-      
-//       &:hover:not(.active) {
-//         background-color: #ddd;
-//       }
-//     }
-//   }
-
 .pagination {
   display: flex;
   justify-content: center;
   margin-top: 16px;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   border-radius: 3px;
   width: 40rem;
   margin-left: 44rem;
@@ -58,7 +13,7 @@
     border: none;
     border-radius: 50%;
     background-color: #fff;
-    color:  #A39D9E;
+    color: #a39d9e;
     margin: 0 4px;
     font-size: 16px;
     cursor: pointer;
@@ -66,45 +21,65 @@
     height: 2.6rem;
 
     & > p {
-       
     }
 
     .icon_left {
       font-size: 2rem;
     }
-    
+
     .icon_right {
       font-size: 2rem;
     }
-    
+
     &.active {
-      background-color: #F0F0F0;
+      background-color: #f0f0f0;
       color: var(--shade-black);
       font-weight: 700;
     }
-    
+
     &:hover:not(.active) {
       background-color: #ddd;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    margin-left: 0;
+  @media screen and (max-width: 1024px) {
+    .pagination {
+     padding-left: -40rem;
+      button {
+        margin: 0 2px;
+        font-size: 14px;
+        width: 2rem;
+        height: 2rem;
 
-    button {
-      margin: 0 2px;
-      font-size: 14px;
-      width: 2rem;
-      height: 2rem;
+        .icon_left {
+          font-size: 1.5rem;
+        }
 
-      .icon_left {
-        font-size: 1.5rem;
-      }
-
-      .icon_right {
-        font-size: 1.5rem;
+        .icon_right {
+          font-size: 1.5rem;
+        }
       }
     }
   }
 }
+
+
+  @media screen and (max-width: 726px) {
+    .pagination {
+      button {
+        margin: 0 2px;
+        font-size: 14px;
+        width: 2rem;
+        height: 2rem;
+
+        .icon_left {
+          font-size: 1.5rem;
+        }
+
+        .icon_right {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+

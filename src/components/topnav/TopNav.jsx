@@ -1,4 +1,4 @@
-import { FaAppStore } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 import "./topnav.scss";
 import { BiUserCircle } from "react-icons/bi";
 import { RiEnglishInput } from "react-icons/ri";
@@ -8,7 +8,7 @@ const TopNav = () => {
   return (
     <div className="topnav">
       <div className="flex-container">
-        <div></div>
+        <FiMenu className="menu_icon"/>
         <ul>
           <li>
             <BiUserCircle className="icon" />

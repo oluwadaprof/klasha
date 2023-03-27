@@ -84,9 +84,12 @@ const Dashboard = () => {
           {/* First sales side chart */}
         </div>
         <div className="second_sales-section">
-          <section className="mainchart">
-            <img src={chartImage} alt=""/>
-            </section>
+          {/* <section className="mainchart"> */}
+            <div className="mainchart">
+              
+            <img src={chartImage}  alt=""/>
+            </div>
+            {/* </section> */}
           <div className="content">
             <p>
               KlashaWire - send <br />

@@ -1,35 +1,111 @@
-.topnav{
-    flex: 5;
-    height: 3rem;
-    margin-top: .5rem;
-    // justify-content: space-between;
-    .flex-container{
+.topnav {
+  flex: 5;
+  height: 3rem;
+  margin-top: 0.5rem;
+  // justify-content: space-between;
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    .menu_icon {
+      display: none;
+    }
+    ul {
+      list-style: none;
+      justify-content: flex-end;
+      display: flex;
+      align-items: left;
+      width: 100%;
+      margin-left: 20rem;
+      margin-right: 2rem;
+      li {
+        text-align: left;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        font-size: 1.4rem;
         display: flex;
-        ul{
-            list-style:none;
-            justify-content: flex-end;
-            display: flex;
-            align-items: left;
-            width: 100%;
-            margin-left: 20rem;
-            margin-right: 2rem;
-            li{
-                text-align: left;
-                padding-left: .7rem;
-                padding-right: .7rem;
-                font-size: 1.4rem;
-                display: flex;
-                justify-content: center;
-                gap: .4rem;
-                .icon{
-                    transform: scale(1.5);
-                    margin-left: .7rem;
-                }
-            }
+        justify-content: center;
+        gap: 0.4rem;
+        .icon {
+          transform: scale(1.5);
+          margin-left: 0.7rem;
         }
+      }
     }
-    hr{
-        border: 1px solid 
-        #EDEDED;
-    }
+  }
+  hr {
+    border: 1px solid #ededed;
+  }
 }
+
+@media screen and (max-width: "1024px") {
+  .flex-container {
+    display: block;
+    .menu_icon {
+      display: block;
+      font-size: 1.7rem;
+    }
+  }
+
+  ul {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media screen and (max-width: '768px') {
+  .flex-container {
+    //   margin-left: 0;
+    //   margin-right: 1rem;
+    .menu_icon {
+      display: block;
+    }
+  }
+
+  ul {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: '576px') {
+  .flex-container {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    .menu_icon {
+      display: inline-block;
+    }
+  }
+
+  ul {
+    // display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .icon {
+    transform: scale(1.2);
+    margin-left: 0.5rem;
+  }
+
+  .icon-arrow {
+    // display: none;
+  }
+}
+
+// @media only screen and (max-width: "425px") {
+//     .topnav{
+//       width: 20rem;
+//       .flex-container{
+//         font-size: .7rem;
+//         margin-left: -20rem;
+//         ul{
+//             margin-left: -10rem;
+//         }
+//       }
+
+//     }
+
+//   }

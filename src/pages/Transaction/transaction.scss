@@ -7,6 +7,7 @@
   padding: 0.6rem;
   border-radius: 4px;
   margin-bottom: 4rem;
+  width: auto;
   h3 {
     font-style: normal;
     font-weight: 500;
@@ -48,6 +49,24 @@
     margin-top: 10rem;
     margin-left: -15rem;
     text-align: left;
+    .search_content{
+      flex-wrap: wrap;
+      row-gap: 1rem;
+      .filter_content{
+        &> button{
+          transform: scale(.8);
+        }
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: "425px") {
+  .transaction{
+    width: 30rem;
+    margin-left: -16rem;
+   
   }
 
 }
