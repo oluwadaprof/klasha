@@ -5,7 +5,8 @@
   border: 1px solid #e8e8e8;
   border-radius: 3px;
   width: 40rem;
-  margin-left: 44rem;
+  margin-left: 18rem;
+  // margin-left: 44rem;
   align-items: center;
   border-radius: 5px;
 
@@ -44,7 +45,7 @@
 
   @media screen and (max-width: 1024px) {
     .pagination {
-     padding-left: -40rem;
+     margin-left: 15rem;
       button {
         margin: 0 2px;
         font-size: 14px;
@@ -64,8 +65,29 @@
 }
 
 
+@media screen and (max-width: 810px) {
+  .pagination {
+    margin-left: 15rem;
+    button {
+      margin: 0 2px;
+      font-size: 14px;
+      width: 2rem;
+      height: 2rem;
+
+      .icon_left {
+        font-size: 1.5rem;
+      }
+
+      .icon_right {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
   @media screen and (max-width: 726px) {
     .pagination {
+      margin-left: 12rem;
       button {
         margin: 0 2px;
         font-size: 14px;

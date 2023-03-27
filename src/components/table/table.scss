@@ -1,5 +1,7 @@
 .table-container {
   overflow-x: auto;
+  display: flex;
+  flex-direction: column;
   table {
     border-collapse: collapse;
     width: 100%;
@@ -27,6 +29,10 @@
     tr:hover {
       background-color: #ddd;
     }
+  }
+  :nth-child(2){
+    // margin-left: 20rem;
+    align-items: left;
   }
 }
 

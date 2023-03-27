@@ -18,6 +18,8 @@ const Transaction = () => {
     <div className="transaction">
       <h3>Transaction History</h3>
 
+      <div className="wrap" >
+
       <div className="search_content">
         <Search onSearch={handleSearch} />
         <div className="filter_content">
@@ -28,10 +30,12 @@ const Transaction = () => {
         </div>
       </div>
 
-      <section>
+      <section >
         <Table />
       </section>
     </div>
+        
+      </div>
   );
 };
 

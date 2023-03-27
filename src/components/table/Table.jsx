@@ -49,6 +49,7 @@ const Table = () => {
         </thead>
         {currentData.map((row) => (
           <tr key={row.id}>
+            <td>{row.transactionID}</td>
             <td>{row.source}</td>
             <td>{row.customerName}</td>
             <td>{row.customerEmail}</td>

@@ -4,6 +4,15 @@ import "./sidebar.scss";
 import { useState } from "react";
 import Logo from "../../assets/klasha__logo 1.png";
 import { NavLink } from "react-router-dom";
+import { TbChartPie } from "react-icons/tb";
+import { CiWallet } from "react-icons/ci";
+import { TbArrowsSort } from "react-icons/tb";
+import { TfiBarChartAlt } from "react-icons/tfi";
+import { BsMegaphone } from "react-icons/bs";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BiLinkAlt } from "react-icons/bi";
+import { HiArrowPath } from "react-icons/hi2";
+
 
 const SideBar = () => {
   const [isActive, setIsActive] = useState("home");
@@ -21,14 +30,14 @@ const SideBar = () => {
             className="li"
             activeClassName="active"
           >
-            <FaAppStore className="icon" />
+            <TbChartPie className="icon" />
             <span> Dashboard</span>
           </NavLink>
           <NavLink to="/balances" className="li" activeClassName="active">
-            <FaAppStore className="icon" /> <span>Balances</span>
+            <CiWallet className="icon" /> <span>Balances</span>
           </NavLink>
           <NavLink to="/transaction" className="li " activeClassName="active" >
-            <FaAppStore className="icon" /> <span>Transactions</span>
+            <TbArrowsSort className="icon" /> <span>Transactions</span>
           </NavLink>
           <NavLink
             to="/analytics"
@@ -36,26 +45,26 @@ const SideBar = () => {
             activeClassName="active"
             
           >
-            <FaAppStore className="icon" /> <span>Analytics</span>
+            <TfiBarChartAlt className="icon" /> <span>Analytics</span>
           </NavLink>
           <NavLink to="/marketing" className="li " activeClassName="active" >
-            <FaAppStore className="icon" /> <span>Marketing</span>
+            <BsMegaphone className="icon" /> <span>Marketing</span>
           </NavLink>
           <NavLink to="/exchangeRates" className="li " activeClassName="active" >
-            <FaAppStore className="icon" /> <span>Exchange rates</span>
+            <HiArrowPath className="icon" /> <span>Exchange rates</span>
           </NavLink>
 
           <p className="title">Accept Payments</p>
           <NavLink to="/checkouts" className="li " activeClassName="active" >
-            <FaAppStore className="icon" /> <span>Checkouts</span>
+            <AiOutlineShoppingCart className="icon" /> <span>Checkouts</span>
           </NavLink>
           <NavLink to="/paymentLink" className="li " activeClassName="active" >
-            <FaAppStore className="icon" /> <span>Payment Links</span>
+            <BiLinkAlt className="icon" /> <span>Payment Links</span>
           </NavLink>
 
           <p className="title">Send Payments</p>
           <NavLink to="/wire" className="li " activeClassName="active" >
-            <FaAppStore className="icon" /> <span>Wire</span>
+            <BiLinkAlt className="icon" /> <span>Wire</span>
           </NavLink>
         </ul>
       </div>
