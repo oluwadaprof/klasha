@@ -20,7 +20,8 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <img src={Logo} alt="Klasha Logo" />
+        <NavLink to='/' className='logo'><img className="logo" src={Logo} alt="Klasha Logo" /></NavLink>
+        
       </div>
       <div className="center">
         <ul>
