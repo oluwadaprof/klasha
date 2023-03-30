@@ -21,7 +21,9 @@ const MobileNav = ({handleRemoveMenu}) => {
   return (
     <div className="mobilenav">
       <div className="top">
+        <NavLink className='mobile_logo' to="/">
         <img src={Logo} alt="Klasha Logo" />
+        </NavLink>
        <IoMdClose className="close_icon" onClick={handleRemoveMenu}/> 
       </div>
       <div className="center">

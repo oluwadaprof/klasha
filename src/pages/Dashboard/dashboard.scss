@@ -36,6 +36,7 @@
         // flex-wrap: nowrap;
         row-gap: 1rem;
         column-gap: 2rem;
+        width: auto;
         & > h2 {
           font-size: 20px;
           font-weight: 500;
@@ -131,21 +132,13 @@
     margin-top: -3rem;
     width: 100vw;
     .mainchart {
-      
+      z-index: -999;
       overflow: scroll;
-      // padding-top: .4rem;
-      // width: 55%;
-      // transform: scale(0.93);
-      // margin-left: -1rem;
-      // border: 1px solid black;
-      // border-radius: 8px;
-      // height: 25rem;
     }
     & > .content {
       background: var(--primary-color);
       height: 18rem;
       width: 25rem;
-      // margin-top: 5rem;
       border-radius: 8px;
       background-image: url("../../assets/lines.png");
       & > p {
@@ -157,14 +150,13 @@
         margin-top: 2rem;
       }
     }
-    // flex: .6;
   }
 }
 
-@media only screen and (max-width: "1024px") {
+@media only screen and (max-width: 1024px) {
   .dashboard {
     margin-top: 10rem;
-    margin-left: -15rem;
+    margin-left: -17rem;
     .site__overview {
       & > div {
         overflow-x: scroll;
@@ -172,6 +164,7 @@
     }
   }
   .sales {
+
     .first_sales-section {
       // width: 70rem;
       & > header {
@@ -183,6 +176,8 @@
       flex-wrap: w;
       .mainchart {
         width: 63%;
+        overflow-x: scroll;
+        overflow-y: none;
       }
       & > .content {
         width: 22rem;
@@ -190,10 +185,10 @@
     }
   }
 }
-@media only screen and (max-width: "768px") {
+@media only screen and (max-width: 768px) {
   .dashboard {
     margin-top: 10rem;
-    margin-left: -15rem;
+    margin-left: -17rem;
     .site__overview {
       & > div {
         overflow-x: scroll;
@@ -209,6 +204,7 @@
     .second_sales-section {
       .mainchart {
         width: 87%;
+        overflow-x: scroll;
       }
       & > .content {
         width: 22rem;
@@ -216,10 +212,10 @@
     }
   }
 }
-@media only screen and (max-width: "425px") {
+@media only screen and (max-width: 425px) {
   .dashboard {
     margin-top: 10rem;
-    margin-left: -15rem;
+    margin-left: -18rem;
     width: 30rem;
     .site__overview {
       & > div {
@@ -230,13 +226,14 @@
   .sales {
     .first_sales-section {
       & > header {
-        // flex-wrap: wrap;
-        // width: 10rem;
+        flex-wrap: wrap;
+       
       }
     }
     .second_sales-section {
       .mainchart {
         width: 79%;
+        overflow-x: scroll;
       }
       & > .content {
         width: 28rem;

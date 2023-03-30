@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import chartImage from '../../assets/mainchart.png'
+import chartImage from "../../assets/mainchart.png";
 import ChartData from "../../components/chart/ChartData";
 import MainChart from "../../components/chart/MainChart";
 import SmallChart from "../../components/chart/SmallChart";
@@ -80,16 +80,13 @@ const Dashboard = () => {
               Download Report
             </button>
           </header>
-
-          {/* First sales side chart */}
         </div>
         <div className="second_sales-section">
           {/* <section className="mainchart"> */}
-            <div className="mainchart">
-              
-            <img src={chartImage}  alt=""/>
-            </div>
-            {/* </section> */}
+          <div className="mainchart">
+            <img src={chartImage} alt="chart" />
+          </div>
+          {/* </section> */}
           <div className="content">
             <p>
               KlashaWire - send <br />

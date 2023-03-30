@@ -5,10 +5,8 @@ import React, { useState } from "react";
 import Table from "../../components/table/Table";
 import { columns, tableData } from "../../components/table/TableData";
 
-
 const Transaction = () => {
-
-  const [data, setData] = useState([tableData]);
+  // const [data, setData] = useState([tableData]);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (query) => {
@@ -18,24 +16,22 @@ const Transaction = () => {
     <div className="transaction">
       <h3>Transaction History</h3>
 
-      <div className="wrap" >
-
-      <div className="search_content">
-        <Search onSearch={handleSearch} />
-        <div className="filter_content">
-          <button type="">
-            Filter <BiFilter />
-          </button>
-          <button type="">Export</button>
+      <div className="wrap">
+        <div className="search_content">
+          <Search onSearch={handleSearch} />
+          <div className="filter_content">
+            <button type="">
+              Filter <BiFilter />
+            </button>
+            <button type="">Export</button>
+          </div>
         </div>
-      </div>
 
-      <section >
-        <Table />
-      </section>
-    </div>
-        
+        <section>
+          <Table />
+        </section>
       </div>
+    </div>
   );
 };
 

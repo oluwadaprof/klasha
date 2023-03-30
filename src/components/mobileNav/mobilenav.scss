@@ -23,9 +23,11 @@
             cursor: pointer;
           }
       }
-      & > img {
-        height: 1.7rem;
-        width: 6.9rem;
+      .mobile_logo{
+        & > img {
+          height: 1.7rem;
+          width: 6.9rem;
+        }
       }
     }
     .center {

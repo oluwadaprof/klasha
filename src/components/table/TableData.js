@@ -1,3 +1,4 @@
+// Header Data
 export const columns = [
   "Transaction ID",
   "Source",
@@ -8,6 +9,7 @@ export const columns = [
   "Status",
 ];
 
+// Content Data
 export const tableData = [
   {
     id: 1,

@@ -5,48 +5,38 @@ import {columns, tableData} from './TableData'
 
 
 const Table = () => {
-  // const data = [...Array(100)].map((_, i) => {
-  //   return [
-  //     `Row ${i + 1} - Column 1`,
-  //     `Row ${i + 1} - Column 2`,
-  //     `Row ${i + 1} - Column 3`,
-  //     `Row ${i + 1} - Column 4`,
-  //     `Row ${i + 1} - Column 5`,
-  //     `Row ${i + 1} - Column 6`,
-  //   ];
-  // });
 
   const itemsPerPage = 6;
 
   const [currentPage, setCurrentPage] = useState(1);
 
+  //Updates page change 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
+  // Checks for pages index and updates the start and end index making sure its six perpage
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex  + itemsPerPage;
   const currentData = tableData.slice(startIndex, endIndex);
 
  
-
+//Returns data according to itemsperpage using the tabledata
   const totalPages = Math.ceil(tableData.length / itemsPerPage);
 
-
-
-
- 
 
   return (
     <div className="table-container">
       <table>
         <thead>
+          {/* Maps the header into the table */}
           <tr>
             {columns.map((header) => (
               <th key={header}>{header}</th>
             ))}
           </tr>
         </thead>
+        {/* Maps the data for each row into the table */}
         {currentData.map((row) => (
           <tr key={row.id}>
             <td>{row.transactionID}</td>
@@ -59,6 +49,7 @@ const Table = () => {
           </tr>
         ))}
       </table>
+      {/* Pagination component to handle all its events to navigate table data */}
       <Pagination
         handlePageChange={handlePageChange}
         setCurrentPage={handlePageChange}
